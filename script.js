@@ -14,6 +14,7 @@
 const pokemonNameEl = document.querySelector(".pok-name");
 const pokContainerEl = document.querySelector(".img-container");
 const pokemonBtn = document.querySelector(".ran");
+const typeEl = document.querySelector(".type");
 const heightEl = document.querySelector(".height");
 const weightEl = document.querySelector(".weight");
 const abilityEl = document.querySelector(".ability");
@@ -31,6 +32,7 @@ const randomPokemon = function () {
     .then((data) => {
       pokemonNameEl.textContent = data.name;
       pokContainerEl.innerHTML = `<img src="${data.sprites.front_default}" alt="${data.name}">`;
+      typeEl.textContent = `Type: ${data.types[0].type.name}`;
       heightEl.textContent = `Height: ${data.height / 10} m`;
       weightEl.textContent = `Weight: ${data.weight / 10} kg`;
       abilityEl.textContent = `Ability: ${data.abilities[0].ability.name}`;
@@ -50,3 +52,4 @@ const randomPokemon = function () {
 
 // Add event listener to the button
 pokemonBtn.addEventListener("click", randomPokemon);
+
