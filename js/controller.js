@@ -16,21 +16,9 @@ const controlRandomPokemon = async function (e) {
   }
 };
 
-const controlSearchResults = async function () {
-  try {
-    const query = searchView.getQuery();
-    if (!query) return;
 
-    pokemonView.renderSpinner();
-    await model.loadPokemon(query);
-    pokemonView.render(model.state.pokemon);
-  } catch (err) {
-    pokemonView.renderError(`No Pokémon found. Please try again!`);
-  }
-};
 
 const init = function () {
   pokemonView.addHandlerClick(controlRandomPokemon);
-  searchView.addHandlerSearch(controlSearchResults);
 };
 init();
