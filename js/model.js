@@ -26,8 +26,3 @@ export const randomPokemon = async function () {
   state.pokemon = createPokemon(data);
 };
 
-export const loadPokemon = async function (query) {
-  const data = await getJSon(`${API_URL}${query.toLowerCase()}`);
-
-  state.pokemon = createPokemon(data);
-};
