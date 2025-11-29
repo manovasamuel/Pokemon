@@ -6,12 +6,21 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script defer src="script.js"></script>
+    <script type="module" src="js/controller.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon</title>
   </head>
   <body>
     <div class="container">
+      <form class="search">
+        <input
+          type="text"
+          class="search__field"
+          placeholder="Search for a Pokémon..."
+        />
+        <button class="btn search__btn">Search</button>
+      </form>
+
       <div class="card">
         <h1 class="pok-name"></h1>
         <div class="img-container"></div>

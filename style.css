@@ -134,3 +134,29 @@ body::after {
 .ran:active {
   transform: translateY(0);
 }
+
+/* Spinner for loading state */
+.spinner {
+  margin: 5rem auto;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message styling */
+.error {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #b33939; /* A reddish color for errors */
+  text-align: center;
+  padding: 2rem;
+}
