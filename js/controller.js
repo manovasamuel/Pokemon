@@ -1,6 +1,5 @@
 import * as model from "./model.js";
 import pokemonView from "./view.js";
-import searchView from "./searchView.js";
 
 const controlRandomPokemon = async function (e) {
   e.preventDefault();
@@ -18,6 +17,5 @@ const controlRandomPokemon = async function (e) {
 
 const init = function () {
   pokemonView.addHandlerClick(controlRandomPokemon);
-  searchView.addHandlerSearch(controlSearchResults);
 };
 init();
