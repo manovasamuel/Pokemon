@@ -3,12 +3,16 @@ import { API_URL } from "./config.js";
 
 export const state = {
   pokemon: {},
+  search: {
+    query: "",
+  },
 };
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 const createPokemon = function (data) {
   const pokemon = data;
   return {
+    id: pokemon.id,
     name: pokemon.name,
     image: pokemon.sprites.front_default,
     type: pokemon.types[0].type.name,
@@ -21,8 +25,20 @@ const createPokemon = function (data) {
 
 export const randomPokemon = async function () {
   const randomId = random(1, 1025);
-  const data = await getJSon(`${API_URL}${randomId}`);
-
-  state.pokemon = createPokemon(data);
+  try {
+    const data = await getJSon(`${API_URL}${randomId}`);
+    state.pokemon = createPokemon(data);
+  } catch (err) {
+    throw err;
+  }
 };
 
+export const searchPokemon = async function (query) {
+  state.search.query = query;
+  try {
+    const data = await getJSon(`${API_URL}${query}`);
+    state.pokemon = createPokemon(data);
+  } catch (err) {
+    throw err;
+  }
+};

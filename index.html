@@ -11,19 +11,25 @@
     <title>Pokemon</title>
   </head>
   <body>
-
-      <div class="card">
-        <h1 class="pok-name"></h1>
-        <div class="img-container"></div>
-        <div class="stats">
-          <p class="type"></p>
-          <p class="height"></p>
-          <p class="weight"></p>
-          <p class="ability"></p>
-          <p class="moves"></p>
+      <div class="container">
+       <form class="search-bar">
+      <input class ="search-poki" id="pokemon" name="search"
+       placeholder="Find your Pokemon ✨" />
+      <button  class="search-btn"></button>
+    </form>
+        <div class="card">
+          <h1 class="pok-name"></h1>
+          <div class="img-container"></div>
+          <div class="stats">
+            <p class="type"></p>
+            <p class="height"></p>
+            <p class="weight"></p>
+            <p class="ability"></p>
+            <p class="moves"></p>
+          </div>
         </div>
+        <button class="ran">Random Pokemon</button>
       </div>
-      <button class="ran">Random Pokemon</button>
     </div>
   </body>
 </html>

@@ -160,3 +160,52 @@ body::after {
   text-align: center;
   padding: 2rem;
 }
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-poki {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(31, 38, 135, 0.1);
+  padding: 1rem 1.5rem;
+  outline: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1rem;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.search-poki:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 20px rgba(31, 38, 135, 0.15);
+}
+
+.search-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%233A5DA8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
