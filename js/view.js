@@ -40,6 +40,7 @@ class PokemonView {
         <h1 class="pok-name">${this.#data.name}</h1>
         <div class="img-container">
             <img src="${this.#data.image}" alt="${this.#data.name}">
+            <button class="heart">💖</button>
         </div>
         <div class="stats">
           <p class="type">Type: ${this.#data.type}</p>
